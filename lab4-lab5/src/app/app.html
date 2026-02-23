@@ -1,0 +1,22 @@
+<main>
+  <header class="app-header">
+    <h1> Каталог товаров Kaspi.kz</h1>
+    <p>Лучшие товары с реальными ценами и отзывами</p>
+  </header>
+
+  <div class="categories-bar">
+    <button
+      *ngFor="let category of categories"
+      class="category-btn"
+      [class.active]="selectedCategory?.id === category.id"
+      (click)="selectCategory(category)"
+    >
+      {{ category.name }}
+    </button>
+  </div>
+
+  <app-product-list
+    *ngIf="selectedCategory"
+    [products]="filteredProducts"
+  ></app-product-list>
+</main>

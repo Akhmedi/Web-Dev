@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="792c1b10-37e6-4b9c-9f3f-ffebaabb2bb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/mcp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/1.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/10.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/11.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/12.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/13.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/14.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/15.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/16.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/17.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/18.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/19.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/2.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/20.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/21.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/22.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/3.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/4.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/5.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/6.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/7.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/8.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutor_tasks/9.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="39msE7Tyn4QR1HB4C1UzXfapah0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/akhmedi/Documents/web-dev/lab4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/akhmedi/Documents/web-dev/lab4/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.28774.16" />
+        <option value="bundled-python-sdk-14d54ed193d7-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.28774.16" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="792c1b10-37e6-4b9c-9f3f-ffebaabb2bb4" name="Changes" comment="" />
+      <created>1771312465901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771312465901</updated>
+      <workItem from="1771312467024" duration="2517000" />
+      <workItem from="1771326289539" duration="2456000" />
+      <workItem from="1771330329660" duration="156000" />
+      <workItem from="1771405571879" duration="124000" />
+      <workItem from="1771863501148" duration="6075000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="products-grid" *ngIf="localProducts.length > 0">
+    <app-product-card
+      *ngFor="let product of localProducts"
+      [product]="product"
+      (deleteProduct)="onDeleteProduct($event)"
+    ></app-product-card>
+  </div>
+
+  <div class="empty-message" *ngIf="localProducts.length === 0">
+    <p>No products in this category</p>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="product-card">
+  <div class="image-gallery">
+    <div class="main-image-container">
+      <img
+        [src]="product.images[selectedImageIndex]"
+        [alt]="product.name"
+        class="main-image"
+        (click)="openProductLink()"
+      >
+      <button class="nav-btn prev-btn" (click)="previousImage()">❮</button>
+      <button class="nav-btn next-btn" (click)="nextImage()">❯</button>
+    </div>
+    <div class="thumbnail-container">
+      <img
+        *ngFor="let image of product.images; let i = index"
+        [src]="image"
+        [alt]="product.name"
+        class="thumbnail"
+        [class.active]="i === selectedImageIndex"
+        (click)="selectImage(i)"
+      >
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h3 class="product-name" (click)="openProductLink()">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+
+    <div class="rating">
+      <span *ngFor="let star of getStarArray(); let i = index" class="star">
+        <span [class]="star ? 'filled' : 'empty'">★</span>
+      </span>
+      <span class="rating-number">({{ product.rating }})</span>
+    </div>
+
+    <div class="price">{{ product.price | number:'1.0-0' }} ₸</div>
+
+    <div class="likes-row">
+      <button class="btn-like" (click)="onLike()">
+        ❤️ {{ product.likes }}
+      </button>
+      <button class="btn-delete" (click)="onDelete()">
+        🗑️ Удалить
+      </button>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary" (click)="openProductLink()">
+        Посмотреть на Kaspi.kz
+      </button>
+
+      <div class="share-buttons">
+        <button class="btn-share whatsapp" (click)="shareOnWhatsApp()" title="Поделиться в WhatsApp">
+          WhatsApp
+        </button>
+        <button class="btn-share telegram" (click)="shareOnTelegram()" title="Поделиться в Telegram">
+          Telegram
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
