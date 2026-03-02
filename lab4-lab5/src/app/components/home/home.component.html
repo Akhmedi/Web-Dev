@@ -1,0 +1,42 @@
+<div class="home-container">
+  <div class="hero-section">
+    <h1>Добро пожаловать в Kaspi.kz Store</h1>
+    <p class="hero-subtitle">
+      Лучший выбор электроники в Казахстане. Смартфоны, ноутбуки, наушники и многое другое!
+    </p>
+    <div class="hero-buttons">
+      <button class="browse-btn primary" [routerLink]="['/catalog']">
+        Перейти в каталог
+      </button>
+      <button class="browse-btn secondary" [routerLink]="['/albums']">
+        Посмотреть галерею
+      </button>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <div class="feature-card" (click)="navigateToCategory('smartphones')">
+      <h3>Смартфоны</h3>
+      <p>iPhone, Samsung, Xiaomi - новейшие модели</p>
+      <div class="feature-price">от 189 990 ₸</div>
+    </div>
+
+    <div class="feature-card" (click)="navigateToCategory('laptops')">
+      <h3>Ноутбуки</h3>
+      <p>MacBook, игровые и бизнес-ноутбуки</p>
+      <div class="feature-price">от 439 990 ₸</div>
+    </div>
+
+    <div class="feature-card" (click)="navigateToCategory('headphones')">
+      <h3>Наушники</h3>
+      <p>AirPods, Sony, Bose - премиум звук</p>
+      <div class="feature-price">от 44 990 ₸</div>
+    </div>
+
+    <div class="feature-card" (click)="navigateToCategory('tablets')">
+      <h3>Планшеты</h3>
+      <p>iPad, Samsung Tab - для работы и развлечений</p>
+      <div class="feature-price">от 229 990 ₸</div>
+    </div>
+  </div>
+</div>

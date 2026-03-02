@@ -1,0 +1,75 @@
+
+<div class="album-photos-container">
+  <!-- Индикатор загрузки -->
+  <div *ngIf="loading" class="loading-state">
+    <div class="spinner"></div>
+    <p>Загрузка фотографий...</p>
+  </div>
+
+  <!-- Сообщение об ошибке -->
+  <div *ngIf="error && !loading" class="error-state">
+    <div class="error-icon">⚠️</div>
+    <h2>Фотографии не найдены</h2>
+    <p>{{ error }}</p>
+    <div class="error-actions">
+      <button class="back-btn" (click)="goBack()">Назад к альбому</button>
+      <button class="albums-btn" (click)="goToAlbums()">Все альбомы</button>
+    </div>
+  </div>
+
+  <!-- Фотографии альбома -->
+  <div *ngIf="!loading && !error" class="photos-content">
+    <div class="photos-header">
+      <div class="header-actions">
+        <button class="back-btn" (click)="goBack()">
+          ← Назад к альбому
+        </button>
+      </div>
+
+      <div class="header-info">
+        <h1>{{ album?.title || 'Фотографии альбома' }}</h1>
+        <p *ngIf="photos.length > 0">{{ photos.length }} фотографий</p>
+        <p *ngIf="photos.length === 0">В этом альбоме пока нет фотографий</p>
+      </div>
+    </div>
+
+    <!-- Пустое состояние -->
+    <div *ngIf="photos.length === 0" class="empty-state">
+      <div class="empty-icon">🖼️</div>
+      <h2>Альбом пуст</h2>
+      <p>В этом альбоме пока нет фотографий для отображения.</p>
+      <button class="back-btn" (click)="goBack()">Вернуться к альбому</button>
+    </div>
+
+    <!-- Сетка фотографий -->
+    <div *ngIf="photos.length > 0" class="photos-grid">
+      <div
+        *ngFor="let photo of photos"
+        class="photo-card"
+        [title]="photo.title"
+      >
+        <div class="photo-container">
+          <img
+            [src]="photo.thumbnailUrl"
+            [alt]="photo.title"
+            class="photo-thumbnail"
+            loading="lazy"
+          >
+          <div class="photo-overlay">
+            <div class="photo-title">{{ photo.title }}</div>
+            <div class="photo-actions">
+              <a
+                [href]="photo.url"
+                target="_blank"
+                class="view-full-btn"
+                title="Посмотреть в полном размере"
+              >
+                🔍
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

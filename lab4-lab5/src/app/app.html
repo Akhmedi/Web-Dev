@@ -1,22 +1,18 @@
-<main>
-  <header class="app-header">
-    <h1> Каталог товаров Kaspi.kz</h1>
-    <p>Лучшие товары с реальными ценами и отзывами</p>
-  </header>
-
-  <div class="categories-bar">
-    <button
-      *ngFor="let category of categories"
-      class="category-btn"
-      [class.active]="selectedCategory?.id === category.id"
-      (click)="selectCategory(category)"
-    >
-      {{ category.name }}
-    </button>
+<!-- src/app/app.component.html -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <h2>Kaspi.kz Store</h2>
+    </div>
+    <ul class="nav-menu">
+      <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Главная</a></li>
+      <li><a routerLink="/catalog" routerLinkActive="active" class="nav-link">Каталог</a></li>
+      <li><a routerLink="/albums" routerLinkActive="active" class="nav-link">Галерея</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="nav-link">О магазине</a></li>
+    </ul>
   </div>
+</nav>
 
-  <app-product-list
-    *ngIf="selectedCategory"
-    [products]="filteredProducts"
-  ></app-product-list>
+<main class="main-content">
+  <router-outlet></router-outlet>
 </main>

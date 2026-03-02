@@ -11,7 +11,8 @@ export class ProductService {
     { id: 1, name: 'Смартфоны' },
     { id: 2, name: 'Ноутбуки' },
     { id: 3, name: 'Наушники' },
-    { id: 4, name: 'Планшеты' }
+    { id: 4, name: 'Планшеты' },
+    { id: 5, name: 'Телевизоры' }
   ];
 
   products: Product[] = [
@@ -333,6 +334,22 @@ export class ProductService {
       name: 'Huawei MatePad Pro 11" 256GB',
       description: 'Планшет Huawei с OLED 120 Гц дисплеем, M-Pencil 3 в комплекте и мощным Kirin 9000S.',
       price: 259990,
+      rating: 4.6,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/pe4/pb1/95091450.jpg?format=gallery-medium',
+      images: [
+        'https://resources.cdn-kaspi.kz/img/m/p/pe4/pb1/95091450.jpg?format=gallery-medium',
+        'https://resources.cdn-kaspi.kz/img/m/p/p6a/pb5/95091461.jpg?format=gallery-medium',
+        'https://resources.cdn-kaspi.kz/img/m/p/pda/pb5/95091465.jpg?format=gallery-medium'
+      ],
+      link: 'https://kaspi.kz/shop/p/huawei-matepad-11-5-s-2026-papermatte-11-5-djuim-12-gb-256-gb-zelenyi-154505570/?c=750000000'
+    },
+    {
+      id: 20,
+      categoryId: 5,
+      likes: 0,
+      name: 'Телевизор супер мощьный',
+      description: 'Телик',
+      price: 2259990,
       rating: 4.6,
       image: 'https://resources.cdn-kaspi.kz/img/m/p/pe4/pb1/95091450.jpg?format=gallery-medium',
       images: [

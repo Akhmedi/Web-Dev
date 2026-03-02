@@ -1,0 +1,73 @@
+<div class="album-detail-container">
+  <!-- Индикатор загрузки -->
+  <div *ngIf="loading" class="loading-state">
+    <div class="spinner"></div>
+    <p>Загрузка альбома...</p>
+  </div>
+
+  <!-- Сообщение об ошибке -->
+  <div *ngIf="error && !loading" class="error-state">
+    <div class="error-icon">⚠️</div>
+    <h2>Альбом не найден</h2>
+    <p>{{ error }}</p>
+    <button class="back-btn" (click)="goBack()">Вернуться к альбомам</button>
+  </div>
+
+  <!-- Детали альбома -->
+  <div *ngIf="album && !loading && !error" class="album-detail">
+    <div class="detail-header">
+      <button class="back-btn" (click)="goBack()">
+        ← Назад к альбомам
+      </button>
+    </div>
+
+    <div class="detail-content">
+      <div class="album-info-card">
+        <div class="card-header">
+          <div class="album-icon">📷</div>
+          <h1>Детали альбома</h1>
+        </div>
+
+        <div class="info-section">
+          <div class="info-row">
+            <label class="info-label">ID альбома:</label>
+            <span class="info-value">{{ album.id }}</span>
+          </div>
+
+          <div class="info-row">
+            <label class="info-label">ID пользователя:</label>
+            <span class="info-value">{{ album.userId }}</span>
+          </div>
+
+          <div class="info-row">
+            <label class="info-label">Название:</label>
+            <input
+              type="text"
+              class="title-input"
+              [(ngModel)]="editedTitle"
+              placeholder="Введите название альбома"
+            >
+          </div>
+        </div>
+
+        <div class="actions-section">
+          <button
+            class="save-btn"
+            [disabled]="saving || !editedTitle.trim()"
+            (click)="saveAlbum()"
+          >
+            <span *ngIf="!saving">Сохранить</span>
+            <span *ngIf="saving">Сохранение...</span>
+          </button>
+
+          <button
+            class="photos-btn"
+            [routerLink]="['/albums', album.id, 'photos']"
+          >
+            Посмотреть фотографии
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
