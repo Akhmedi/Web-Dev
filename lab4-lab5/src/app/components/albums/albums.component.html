@@ -11,27 +11,24 @@
 
     <!-- Сообщение об ошибке -->
     <div *ngIf="error && !loading" class="error-state">
-      <div class="error-icon">⚠️</div>
       <p>{{ error }}</p>
       <button class="retry-btn" (click)="loadAlbums()">Попробовать снова</button>
     </div>
 
     <!-- Пустое состояние -->
     <div *ngIf="!loading && !error && albums.length === 0" class="empty-state">
-      <div class="empty-icon">📁</div>
       <h2>Альбомы не найдены</h2>
       <p>В настоящее время нет доступных альбомов для просмотра.</p>
     </div>
 
     <!-- Список альбомов -->
     <div *ngIf="!loading && !error && albums.length > 0" class="albums-grid">
-      <div
-        *ngFor="let album of albums"
-        class="album-card"
-        [routerLink]="['/albums', album.id]"
-      >
+        <div
+          *ngFor="let album of albums"
+          class="album-card"
+          [routerLink]="['/albums/' + album.id]"
+        >
         <div class="album-header">
-          <div class="album-icon">📷</div>
           <div class="album-info">
             <h3 class="album-title">{{ album.title }}</h3>
             <p class="album-meta">ID: {{ album.id }} | User: {{ album.userId }}</p>
@@ -39,13 +36,14 @@
         </div>
 
         <div class="album-actions">
-          <button
-            class="delete-btn"
-            (click)="deleteAlbum(album.id, $event)"
-            title="Удалить альбом"
-          >
-            🗑️
-          </button>
+            <button
+              type="button"
+              class="delete-btn"
+              (click)="deleteAlbum(album.id, $event)"
+              title="Удалить альбом"
+            >
+              🗑️
+            </button>
         </div>
       </div>
     </div>

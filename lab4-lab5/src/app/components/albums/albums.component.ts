@@ -42,7 +42,6 @@ export class AlbumsComponent implements OnInit {
   deleteAlbum(id: number, event: Event): void {
     event.stopPropagation();
     event.preventDefault();
-
     if (confirm('Вы уверены, что хотите удалить этот альбом?')) {
       this.albumService.deleteAlbum(id).subscribe({
         next: () => {
