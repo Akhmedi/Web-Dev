@@ -26,28 +26,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Album(models.Model):
-    title = models.CharField(max_length=200, verbose_name='Название')
-    description = models.TextField(blank=True, verbose_name='Описание')
-
-    class Meta:
-        verbose_name = 'Альбом'
-        verbose_name_plural = 'Альбомы'
-
-    def __str__(self):
-        return self.title
-
-
-class Photo(models.Model):
-    title = models.CharField(max_length=200, verbose_name='Название')
-    url = models.URLField(verbose_name='URL изображения')
-    album = models.ForeignKey(Album, on_delete=models.CASCADE, verbose_name='Альбом')
-
-    class Meta:
-        verbose_name = 'Фотография'
-        verbose_name_plural = 'Фотографии'
-
-    def __str__(self):
-        return self.title

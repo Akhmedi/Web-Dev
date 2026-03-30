@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
-from .models import Product, Category, Album, Photo
+from .models import Product, Category
 import json
 
 
@@ -151,84 +151,3 @@ def category_products(request, category_id):
         }, status=404)
 
 
-@require_http_methods(["GET"])
-def albums_list(request):
-    try:
-        albums = Album.objects.all()
-        albums_data = []
-
-        for album in albums:
-            albums_data.append({
-                'id': album.id,
-                'title': album.title,
-                'description': album.description
-            })
-
-        return JsonResponse({
-            'status': 'success',
-            'data': albums_data
-        })
-
-    except Exception as e:
-        return JsonResponse({
-            'status': 'error',
-            'message': str(e)
-        }, status=500)
-
-
-@require_http_methods(["GET"])
-def album_detail(request, album_id):
-    try:
-        album = get_object_or_404(Album, id=album_id)
-
-        album_data = {
-            'id': album.id,
-            'title': album.title,
-            'description': album.description
-        }
-
-        return JsonResponse({
-            'status': 'success',
-            'data': album_data
-        })
-
-    except Exception as e:
-        return JsonResponse({
-            'status': 'error',
-            'message': 'Альбом не найден'
-        }, status=404)
-
-
-@require_http_methods(["GET"])
-def album_photos(request, album_id):
-    try:
-        album = get_object_or_404(Album, id=album_id)
-        photos = Photo.objects.filter(album=album)
-        photos_data = []
-
-        for photo in photos:
-            photos_data.append({
-                'id': photo.id,
-                'title': photo.title,
-                'url': photo.url,
-                'album': {
-                    'id': photo.album.id,
-                    'title': photo.album.title
-                }
-            })
-
-        return JsonResponse({
-            'status': 'success',
-            'data': photos_data,
-            'album': {
-                'id': album.id,
-                'title': album.title,
-                'description': album.description
-            }
-        })
-
-    except Exception as e:
-        return JsonResponse({
-            'status': 'error',
-            'message': 'Альбом не найден'
-        }, status=404)
